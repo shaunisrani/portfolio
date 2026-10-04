@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaun Israni: Personal site and portfolio</title>
+  <style>
+    body { font: 100%/1.5 system-ui; max-width: 50rem; margin: auto; padding: 1rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem; padding-bottom: .5rem; border-bottom: 1px solid #ccc; }
+    section, article { margin-block: 1rem; }
+    form { display: grid; gap: .75rem; }
+    label { display: grid; gap: .25rem; }
+    h1 { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/shaunisrani" target="_blank">GitHub</a>
+  </nav>
+  <main>
+  <section id="home">
+  <h1>Shaun Israni</h1>
+  <p>Hi! I'm a data science student at UC San Diego (B.S., expected June 2027). I work on biostatistics and computational neuroscience research, and I enjoy turning data into clear, useful visualizations and building things for the web.</p>
+  </section>
+  <section id="projects">
+  <h2>Projects</h2>
+  <article>
+    <h3>Sleepiness &amp; Diagnostic Group Analysis (COGS 108)</h3>
+    <p>Missingness analysis, exploratory data analysis, and hypothesis testing on observational biomarker health data, emphasizing interpretability and statistical validity.</p>
+  </article>
+  <article>
+    <h3>SignalDeck: ML Trading Analytics App</h3>
+    <p>React Native dashboard for a self-built XGBoost trading bot. Visualizes walk-forward backtest metrics and benchmark comparisons with custom SVG charts, fed by a Python export pipeline.</p>
+  </article>
+  <article>
+    <h3>UCSD Announcements Scraper &amp; Sentiment Analysis (DSC 96)</h3>
+    <p>Python scraping pipeline (requests, BeautifulSoup) that turns raw HTML from UCSD student pages into structured JSON, followed by sentiment analysis and summary statistics.</p>
+  </article>
+  </section>
+  <section id="resume">
+  <h1 id="resume-title">Resume</h1>
+  <p><a href="mailto:sisrani@ucsd.edu">sisrani@ucsd.edu</a> · <a href="https://www.linkedin.com/in/shaunisrani" target="_blank">LinkedIn</a> · <a href="https://github.com/shaunisrani" target="_blank">GitHub</a></p>
+
+  <section>
+    <h2>Education</h2>
+    <article>
+      <header>
+        <h3>University of California, San Diego, La Jolla, CA</h3>
+        <p>B.S. in Data Science, Halıcıoğlu Data Science Institute · Expected <time datetime="2027-06">June 2027</time></p>
+      </header>
+      <ul>
+        <li>Major GPA: 3.3/4.0</li>
+        <li>Honors: National Merit; SAT 1560; ACT 34; graduated high school in 3 years with IB coursework</li>
+        <li>Relevant courses: Principles of Data Science; Data Structures &amp; Algorithms for Data Science; Theoretical Foundations of Data Science I &amp; II; Data Ethics; Practice of Data Science; Probability; Math Statistics I; Intro to Data Management; Vector Calculus; Systems for Scalable Analytics; Intro to Data Visualization; Probabilistic Modeling and ML; Representation Learning; Intro to Data Mining; Applied Statistical Data Analysis and Inference</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+    <article>
+      <header>
+        <h3>The Council on Recovery: Data Analyst Intern</h3>
+        <p><time datetime="2025-06">June 2025</time> – <time datetime="2025-09">Sep 2025</time></p>
+      </header>
+      <ul>
+        <li>Analyzed 3 years of CRM data covering 10,000+ donors and prepared an insights report for the Director of Development to evaluate fundraising performance.</li>
+        <li>Completed an exploratory data analysis project on donor and event attendance trends in Jupyter Notebook using pandas, NumPy, matplotlib, and SciPy.</li>
+        <li>Used Microsoft Power Automate workflows to streamline venue management operations supporting 1,000 events per year.</li>
+      </ul>
+    </article>
+    <article>
+      <header>
+        <h3>TestMasters Professional Test Prep: Private Tutor</h3>
+        <p><time datetime="2024-06">Jun 2024</time> – <time datetime="2024-09">Sep 2024</time></p>
+      </header>
+      <ul>
+        <li>Conducted weekly one-on-one tutoring for SAT, PSAT, ACT, and upper-level ISEE math.</li>
+        <li>Tutored middle and high school students in Algebra, Linear Functions, Geometry, Trigonometry, Data Analysis, and AP Calculus AB/BC.</li>
+        <li>Gave structured feedback on advanced math course materials, using student interactions to recommend session designs.</li>
+      </ul>
+    </article>
+    <article>
+      <header>
+        <h3>AlphaX Decision Sciences: Experiential Learning Intern</h3>
+        <p><time datetime="2023-06">Jun 2023</time> – <time datetime="2023-08">Aug 2023</time></p>
+      </header>
+      <ul>
+        <li>Built introductory Python projects in Jupyter Notebook focused on algorithmic problem-solving and basic statistical analysis.</li>
+        <li>Presented project work to management and helped refine internal Python/Jupyter instructional materials.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Research</h2>
+    <article>
+      <header>
+        <h3>Biostatistics Research Assistant, Prof. Peter Chi</h3>
+        <p><time datetime="2026-01">Jan 2026</time> – Present</p>
+      </header>
+      <ul>
+        <li>Contributing to a year-long phylogenetics project on scalable inference for large genetic sequence trees under non-Gaussian and noisy trait models.</li>
+        <li>Studying how pruning algorithms, numerical quadrature, and least squares optimization support modeling of evolutionary mutation patterns, with potential applications to neurodegenerative disease prediction.</li>
+      </ul>
+    </article>
+    <article>
+      <header>
+        <h3>Computational Neuroscience Research Assistant, Postdoc Daniel Song</h3>
+        <p><time datetime="2026-01">Jan 2026</time> – Present</p>
+      </header>
+      <ul>
+        <li>Working on a neuroplasticity project for recovery after spinal cord injury, exploring stem-cell based repair.</li>
+        <li>Applying computer vision and deep learning to behavioral video of rodent motor tasks to measure functional recovery over time.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Leadership</h2>
+    <article>
+      <h3>UCSD Data Science Student Society (DS3)</h3>
+      <p>Content Board Writer (2024–2025); Executive Board, Workshops Team (2025–Present). Taught workshops on the Claude API and basic ML pipelining.</p>
+    </article>
+    <article>
+      <h3>UCSD Circle K International (CKI)</h3>
+      <p>Board Tech Chair (Spring 2025–Fall 2026). Supported website updates and Discord communications.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <p>See the <a href="#projects">Projects page</a>.</p>
+  </section>
+
+  <section>
+    <h2>Skills &amp; Interests</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, Java, JavaScript, R, SQL, HTML, CSS, Terminal</li>
+      <li><strong>Libraries:</strong> NumPy, pandas, SciPy, matplotlib, scikit-learn, BeautifulSoup, React, PyTorch, TensorFlow</li>
+      <li><strong>Tools:</strong> Claude Code, GitHub, VSCode, Cursor, PostgreSQL, Tableau, PowerBI, n8n, AWS, Excel, LaTeX, Node.js, Django</li>
+      <li><strong>Interests:</strong> Tennis, basketball, math, philosophy, psychology, reading</li>
+    </ul>
+  </section>
+  </section>
+  <section id="contact">
+  <h2>Contact me</h2>
+  <form action="mailto:sisrani@ucsd.edu" method="POST" enctype="text/plain">
+    <label>Your email
+      <input name="email" type="email" value="test@example.com">
+    </label>
+    <label>Subject
+      <input name="subject" value="Hello!">
+    </label>
+    <label>Message
+      <textarea name="body">Testing the contact form.</textarea>
+    </label>
+    <button>Send</button>
+  </form>
+  </section>
+  </main>
+</body>
+</html>
