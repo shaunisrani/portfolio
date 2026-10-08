@@ -1,0 +1,172 @@
+/* ---------- Global ---------- */
+:root {
+  --color-accent: oklch(65% 50% 0);
+  --border-gray: oklch(80% 3% 200);
+}
+
+html {
+  accent-color: var(--color-accent);
+}
+
+body {
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  /* Step 1: center content, never touch the screen edges */
+  margin-inline: max(1em, (100% - 100ch) / 2);
+}
+
+/* Step 4.4: headings */
+h1 {
+  font-size: 400%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* ---------- Step 2: Navigation ---------- */
+nav ul,
+nav li {
+  display: contents;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid var(--border-gray);
+  padding-bottom: 0.1em;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+/* ---------- Step 3: Contact form ---------- */
+form input,
+form textarea,
+form button {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+form label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+form button {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Step 4: Projects ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0.5em;
+}
+
+.projects h2 {
+  margin: 0;
+}
+
+.projects img {
+  width: 100%;
+}
+
+/* ---------- Step 5: Resume / CV ---------- */
+.resume h1 {
+  margin-bottom: 0.2em;
+}
+
+.resume .contact-line {
+  color: oklch(45% 3% 200);
+  margin-top: 0;
+}
+
+.resume a {
+  color: var(--color-accent);
+}
+
+.resume section {
+  margin-block: 2em;
+}
+
+.resume section > h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  border-bottom: 2px solid oklch(from var(--color-accent) 90% 10% h);
+  padding-bottom: 0.3em;
+}
+
+.resume article {
+  margin-block: 1.25em;
+}
+
+/* role on the left, dates on the right; stacks on narrow screens */
+.resume article header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0 1em;
+}
+
+.resume article header h3 {
+  margin: 0;
+  font-size: 1.05em;
+}
+
+.resume article header p {
+  margin: 0;
+  color: oklch(50% 3% 200);
+  font-size: 0.9em;
+  font-variant-numeric: tabular-nums;
+}
+
+.resume ul {
+  margin-top: 0.4em;
+  padding-left: 1.2em;
+}
+
+.resume li {
+  margin-block: 0.2em;
+}
+
+.resume li::marker {
+  color: var(--color-accent);
+}
+
+.resume .skills strong {
+  display: inline-block;
+  min-width: 7.5em;
+}
