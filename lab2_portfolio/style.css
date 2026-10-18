@@ -1,10 +1,11 @@
 /* ---------- Global ---------- */
 :root {
   --color-accent: oklch(65% 50% 0);
-  --border-gray: oklch(80% 3% 200);
+  --border-gray: oklch(50% 10% 200 / 40%);
 }
 
 html {
+  color-scheme: light dark;
   accent-color: var(--color-accent);
 }
 
@@ -53,13 +54,14 @@ nav a.current {
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 /* ---------- Step 3: Contact form ---------- */
 form input,
 form textarea,
-form button {
+form button,
+select {
   font: inherit;
 }
 
@@ -169,4 +171,13 @@ form button {
 .resume .skills strong {
   display: inline-block;
   min-width: 7.5em;
+}
+
+/* ---------- Lab 3: theme switcher ---------- */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
 }

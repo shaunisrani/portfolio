@@ -5,19 +5,18 @@ function $$(selector, context = document) {
 }
 
 // ---------- Step 3: automatic navigation menu ----------
-// TODO: edit these to match YOUR pages and GitHub repo name
 let pages = [
   { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
-  { url: 'contact/', title: 'Contact' },
   { url: 'resume/', title: 'Resume' },
-  { url: 'https://github.com/YOUR-USERNAME', title: 'GitHub' },
+  { url: 'contact/', title: 'Contact' },
+  { url: 'https://github.com/shaunisrani', title: 'GitHub' },
 ];
 
 const BASE_PATH =
   location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? '/' // local server
-    : '/YOUR-REPO-NAME/'; // GitHub Pages repo name, e.g. '/website/'
+    : '/portfolio/lab2_portfolio/'; // GitHub Pages (repo + subfolder)
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
@@ -40,8 +39,9 @@ for (let p of pages) {
   );
 
   // open external links in a new tab
-  a.toggleAttribute('target', a.host !== location.host);
-  if (a.host !== location.host) a.target = '_blank';
+  if (a.host !== location.host) {
+    a.target = '_blank';
+  }
 }
 
 // ---------- Step 4: dark mode switch ----------
