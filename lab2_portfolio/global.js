@@ -75,6 +75,62 @@ select.addEventListener('input', function (event) {
   localStorage.colorScheme = event.target.value;
 });
 
+// ---------- Lab 4, Step 1.2: load JSON data ----------
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+// ---------- Lab 4, Step 1.4: render projects ----------
+const VALID_HEADINGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Guard against a missing container
+  if (!(containerElement instanceof HTMLElement)) {
+    console.error('renderProjects: containerElement is not a valid DOM element');
+    return;
+  }
+  // Fall back to h2 if an invalid heading level is passed
+  if (!VALID_HEADINGS.includes(headingLevel)) {
+    console.warn(`renderProjects: invalid heading "${headingLevel}", using h2`);
+    headingLevel = 'h2';
+  }
+
+  // Clear existing content so projects are not duplicated
+  containerElement.innerHTML = '';
+
+  // Placeholder when there is nothing to show
+  if (!Array.isArray(projects) || projects.length === 0) {
+    containerElement.innerHTML = '<p>No projects to display yet.</p>';
+    return;
+  }
+
+  for (let project of projects) {
+    const article = document.createElement('article');
+    const title = project.title ?? 'Untitled project';
+    article.innerHTML = `
+      <${headingLevel}>${title}</${headingLevel}>
+      <img src="${project.image ?? 'https://vis-society.github.io/labs/2/images/empty.svg'}" alt="${title}">
+      <p>${project.description ?? ''}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+// ---------- Lab 4, Step 3: GitHub API ----------
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
 // ---------- Step 5 (optional): better contact form ----------
 let form = document.querySelector('form');
 

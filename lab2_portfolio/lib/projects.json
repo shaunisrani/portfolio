@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Sleepiness & Diagnostic Group Analysis (COGS 108)",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Missingness analysis, exploratory data analysis, and hypothesis testing on observational biomarker health data, emphasizing interpretability and statistical validity."
+  },
+  {
+    "title": "SignalDeck: ML Trading Analytics App",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "React Native dashboard for a self-built XGBoost trading bot. Visualizes walk-forward backtest metrics and benchmark comparisons with custom SVG charts, fed by a Python export pipeline."
+  },
+  {
+    "title": "UCSD Announcements Scraper & Sentiment Analysis (DSC 96)",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Python scraping pipeline (requests, BeautifulSoup) that turns raw HTML from UCSD student pages into structured JSON, followed by sentiment analysis and summary statistics."
+  },
+  {
+    "title": "NYPD Civilian Complaints: Persuasive vs. Deceptive Visualization (DSC 106)",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Group project using ProPublica's NYPD civilian complaint data to build opposing persuasive visualizations about police accountability, with a written analysis of earnest vs. deceptive design choices."
+  },
+  {
+    "title": "Goodreads Recommender Systems (CSE 158)",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Rating prediction, interaction prediction, and time-gap prediction on Goodreads reviews using latent factor models, BPR, ALS, and LightGBM."
+  },
+  {
+    "title": "Phylogenetic Inference Research (Prof. Peter Chi)",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Research on scalable inference for large genetic sequence trees under non-Gaussian and noisy trait models, using pruning algorithms, numerical quadrature, and least squares optimization."
+  },
+  {
+    "title": "Spinal Cord Injury Recovery: Behavioral Video Analysis",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Computational neuroscience research applying computer vision and deep learning to rodent motor-task video to measure functional recovery after spinal cord injury."
+  },
+  {
+    "title": "DSC 148 Final Project",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Final project for DSC 148 (Introduction to Data Mining)."
+  },
+  {
+    "title": "DSC 80 Project",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "End-to-end data science project for DSC 80 (Practice of Data Science): data cleaning, exploratory analysis, hypothesis testing, and predictive modeling."
+  },
+  {
+    "title": "Donor & Event Attendance Analysis (The Council on Recovery)",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Exploratory analysis of 3 years of CRM data covering 10,000+ donors using pandas, NumPy, matplotlib, and SciPy, summarized in an insights report on fundraising performance."
+  },
+  {
+    "title": "DSC 40B Algorithm Implementations",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Homework implementations of data structures and algorithms for data science in Python."
+  },
+  {
+    "title": "Intro Python Projects (AlphaX Decision Sciences)",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Introductory Python projects in Jupyter Notebook focused on algorithmic problem-solving and basic statistical analysis, presented to management."
+  }
+]
