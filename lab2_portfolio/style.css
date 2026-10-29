@@ -340,6 +340,10 @@ form button {
   height: auto;
 }
 
+#chart svg text {
+  font-size: 20px;
+}
+
 .gridlines line {
   stroke: var(--border-gray);
   stroke-opacity: 0.5;
@@ -498,6 +502,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 
 #scatter-story {
   position: relative;
+  padding-top: 60vh; /* no step is active until you start scrolling, so the page opens on all commits */
 }
 
 #scatter-story .step {

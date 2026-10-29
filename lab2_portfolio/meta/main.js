@@ -75,7 +75,7 @@ function renderCommitInfo(data, commits) {
     ['Files', d3.group(data, (d) => d.file).size],
     ['Avg file length', Math.round(d3.mean(fileLengths, (d) => d[1]) ?? 0)],
     ['Max depth', d3.max(data, (d) => d.depth) ?? 0],
-    ['Most work in the', d3.greatest(workByPeriod, (d) => d[1])?.[0] ?? '–'],
+    ['Most work done', d3.greatest(workByPeriod, (d) => d[1])?.[0] ?? '–'],
     ['Busiest day', d3.greatest(workByDay, (d) => d[1])?.[0] ?? '–'],
   ];
   for (const [label, value] of stats) {
@@ -223,6 +223,7 @@ function createBrushSelector(svg) {
 
 function brushed(event) {
   const selection = event.selection;
+  if (event.type === 'start') updateTooltipVisibility(false);
   d3.selectAll('#chart circle').classed('selected', (d) => isCommitSelected(selection, d));
   renderSelectionCount(selection);
   renderLanguageBreakdown(selection);
@@ -289,7 +290,7 @@ function updateFileDisplay(commitsShown) {
 
   filesContainer
     .select('dt')
-    .html((d) => `<code>${d.name}</code><small>${d.lines.length} lines</small>`);
+    .html((d) => `<code>${d.name.replace('lab2_portfolio/', '')}</code><small>${d.lines.length} lines</small>`);
 
   filesContainer
     .select('dd')
