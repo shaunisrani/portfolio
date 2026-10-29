@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching: Boston Bluebikes Traffic (DSC 106)",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Interactive Mapbox + D3 map of ~260k Bluebikes trips from March 2024. Station circles scale with traffic, color shows departure vs. arrival flow, and a time-of-day slider filters trips live.",
+    "url": "https://shaunisrani.github.io/bikewatching/"
+  },
+  {
     "title": "Sleepiness & Diagnostic Group Analysis (COGS 108)",
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",

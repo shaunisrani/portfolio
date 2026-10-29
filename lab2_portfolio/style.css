@@ -517,3 +517,11 @@ dl.info[hidden]:not(:hover, :focus-within) {
   bottom: auto;
   height: 50vh;
 }
+
+/* Lab 7 Step 7: project links */
+.project-link {
+  display: inline-block;
+  margin-top: 0.25em;
+  font-weight: 600;
+  color: var(--color-accent, steelblue);
+}
