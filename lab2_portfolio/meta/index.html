@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta | Shaun Israni</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../global.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+</head>
+<body>
+  <h1>Meta</h1>
+  <p>This page analyzes the code of this website itself: every line of code, which commit last touched it, and when.</p>
+
+  <!-- Lab 8 Step 1.1: time filter -->
+  <div class="commit-filter">
+    <label>
+      Show commits until:
+      <input type="range" id="commit-progress" min="0" max="100" value="100">
+    </label>
+    <time id="commit-time"></time>
+  </div>
+
+  <!-- Lab 6 Step 1: summary stats -->
+  <div id="stats"></div>
+
+  <!-- Lab 8 Step 3: scrollytelling -->
+  <div id="scrolly-1">
+    <div id="scatter-story"></div>
+    <div id="scatter-plot">
+      <h2>Commits by time of day</h2>
+      <div id="chart"></div>
+      <p id="selection-count">No commits selected</p>
+      <dl id="language-breakdown" class="stats"></dl>
+    </div>
+  </div>
+
+  <!-- Lab 6 Step 3: tooltip -->
+  <dl id="commit-tooltip" class="info tooltip" hidden>
+    <dt>Commit</dt>
+    <dd><a href="" id="commit-link" target="_blank"></a></dd>
+    <dt>Date</dt>
+    <dd id="commit-date"></dd>
+    <dt>Time</dt>
+    <dd id="commit-time-of-day"></dd>
+    <dt>Author</dt>
+    <dd id="commit-author"></dd>
+    <dt>Lines edited</dt>
+    <dd id="commit-lines"></dd>
+  </dl>
+
+  <!-- Lab 8 Step 2: unit visualization of files -->
+  <h2>The race for the biggest file</h2>
+  <dl id="files"></dl>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "devDependencies": {
+    "elocuent": "^0.0.4"
+  }
+}

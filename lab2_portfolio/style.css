@@ -297,3 +297,218 @@ form button {
   border-radius: 0.5em;
   box-sizing: border-box;
 }
+
+/* ---------- Lab 6: meta page stats ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+  gap: 0.5em 1em;
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid var(--border-gray);
+  border-radius: 0.5em;
+}
+
+.stats dt {
+  grid-row: 1;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* language breakdown stacks its rows instead */
+#language-breakdown {
+  grid-template-columns: auto 1fr;
+}
+
+#language-breakdown dt,
+#language-breakdown dd {
+  grid-row: auto;
+  font-size: 1rem;
+}
+
+/* ---------- Lab 6: scatterplot ---------- */
+#chart svg {
+  width: 100%;
+  height: auto;
+}
+
+.gridlines line {
+  stroke: var(--border-gray);
+  stroke-opacity: 0.5;
+}
+
+.gridlines .domain {
+  display: none;
+}
+
+#chart circle {
+  transition: all 200ms, r calc(var(--r) * 50ms);
+  transform-origin: center;
+  transform-box: fill-box;
+
+  /* Lab 8 Step 1.4: new dots grow in from nothing */
+  @starting-style {
+    r: 0;
+  }
+}
+
+#chart circle:hover {
+  transform: scale(1.5);
+}
+
+#chart circle.selected {
+  fill: #ff6b6b;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+#chart .selection {
+  fill-opacity: 0.1;
+  stroke: currentColor;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+/* ---------- Lab 6: tooltip ---------- */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+
+  dt {
+    opacity: 0.6;
+  }
+
+  dd {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 10;
+  padding: 0.75em 1em;
+  background: color-mix(in oklch, canvas 85%, transparent);
+  backdrop-filter: blur(6px);
+  border-radius: 0.5em;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.15);
+}
+
+/* ---------- Lab 8: slider ---------- */
+.commit-filter {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  margin-block: 1em;
+
+  label {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+  }
+
+  input {
+    flex: 1;
+  }
+
+  time {
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ---------- Lab 8: unit visualization ---------- */
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0.5em 0;
+
+  > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  dt {
+    grid-column: 1;
+    overflow-wrap: anywhere;
+  }
+
+  dt small {
+    display: block;
+    font-size: 0.75em;
+    opacity: 0.6;
+  }
+
+  dd {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    gap: 0.15em;
+    padding-top: 0.6em;
+    margin-left: 0;
+  }
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color, steelblue);
+  border-radius: 50%;
+}
+
+/* ---------- Lab 8: scrollytelling ---------- */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-story .step {
+  padding-bottom: 60vh;
+  line-height: 1.6;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
+}
